@@ -1,7 +1,6 @@
 # Motion-Detection-Survey
-Motion Detection Survey
 
-Comparative study of motion detection methods for video surveillance systems
+1. Comparative study of motion detection methods for video surveillance systems
 Kamal Sehairi,a Chouireb Fatima,a Jean Meunier,ba University of Laghouat Amar Telidji, TSS Laboratory, Laghouat, Algeria 03000
 b University of Montreal, Department of Computer Science and Operations Research, Montreal, Canada
 
