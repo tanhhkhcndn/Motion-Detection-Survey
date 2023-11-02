@@ -1,5 +1,5 @@
 # tham khao trang web https://debuggercafe.com/moving-object-detection-using-frame-differencing-with-opencv/
-
+# https://github.com/a00ayad00/Motion-Detection-using-frame-differencing-with-opencv/blob/main/Motion%20Detection.py
 import cv2
 
 vid = r"D:\Projects\Computer Vision\Motion Detection\input\video_3.mp4"
