@@ -2,7 +2,7 @@
 # https://github.com/a00ayad00/Motion-Detection-using-frame-differencing-with-opencv/blob/main/Motion%20Detection.py
 import cv2
 
-cv2.startWindowThread()
+# cv2.startWindowThread()
 # img=cv2.imread('Input.png')
 # cv2.imshow('Window',img)
 # cv2.waitKey(0)
@@ -45,7 +45,7 @@ while cap.isOpened():
             
             cv2.rectangle(CurrentFrame, (x, y), (x+w, y+h), (0, 255, 0), 2)
         
-        cv2.namedWindow('frame', cv2.WINDOW_AUTOSIZE)
+        # cv2.namedWindow('frame', cv2.WINDOW_AUTOSIZE)
         cv2.imshow("frame", CurrentFrame)
         # cv2.imshow("binary_img", cv2.flip(binary_img, 1))
         # cv2.imshow("dilated_img", dilated)
@@ -56,7 +56,7 @@ while cap.isOpened():
         
         done, NextFrame = cap.read()
         
-        if cv2.waitKey(1) == ord("g"):
+        if cv2.waitKey(30) == ord("g"):
             break
     else: break
 cv2.destroyAllWindows()
