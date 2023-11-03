@@ -2,16 +2,22 @@
 # https://github.com/a00ayad00/Motion-Detection-using-frame-differencing-with-opencv/blob/main/Motion%20Detection.py
 import cv2
 
-vid = r"D:\Projects\Computer Vision\Motion Detection\input\video_3.mp4"
+cv2.startWindowThread()
+# img=cv2.imread('Input.png')
+# cv2.imshow('Window',img)
+# cv2.waitKey(0)
+
+vid = r"E:\VietBao\2023\Motion-Detection-Survey\video_3.mp4"
 
 cap = cv2.VideoCapture(vid)
 
 frame_width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
 frame_height= cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
 
-fourcc = cv2.VideoWriter_fourcc(*"X264")
-path = r"D:\Projects\Computer Vision\Motion Detection\Detected Motion.MP4"
-out = cv2.VideoWriter(path, fourcc, 30, (int(frame_width), int(frame_height)))
+# fourcc = cv2.VideoWriter_fourcc(*"X264")
+fourcc = cv2.VideoWriter_fourcc(*"MJPG")
+path = r"E:\VietBao\2023\Motion-Detection-Survey\videotmp.MP4"
+out = cv2.VideoWriter(path, fourcc, 10, (int(frame_width), int(frame_height)))
 
 done, CurrentFrame = cap.read()
 done, NextFrame = cap.read()
@@ -39,6 +45,7 @@ while cap.isOpened():
             
             cv2.rectangle(CurrentFrame, (x, y), (x+w, y+h), (0, 255, 0), 2)
         
+        cv2.namedWindow('frame', cv2.WINDOW_AUTOSIZE)
         cv2.imshow("frame", CurrentFrame)
         # cv2.imshow("binary_img", cv2.flip(binary_img, 1))
         # cv2.imshow("dilated_img", dilated)
@@ -49,7 +56,7 @@ while cap.isOpened():
         
         done, NextFrame = cap.read()
         
-        if cv2.waitKey(30) == ord("g"):
+        if cv2.waitKey(1) == ord("g"):
             break
     else: break
 cv2.destroyAllWindows()
