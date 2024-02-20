@@ -15,3 +15,4 @@ literature, and thus this evaluation joins as complementary compared with the pr
 experimental results show that there is no perfect method for all challenging cases; each method performs well in
 certain cases and fails in others. However, this study enables the user to identify the most suitable method for his or
 her needs.
+https://github.com/itberrios/CV_projects/blob/main/motion_detection/detection_with_frame_differencing.ipynb
